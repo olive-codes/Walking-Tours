@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/notificationCS"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#007042"
+    tools:context=".FenceInfoActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/notificationToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/notificationTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Building Name"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notificationToolbar" />
+
+    <TextView
+        android:id="@+id/notificationAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Building Address"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notificationImageView" />
+
+    <View
+        android:id="@+id/notificationView"
+        android:layout_width="375dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="#B1DEDB"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notificationAddress" />
+
+    <ImageView
+        android:id="@+id/notificationToolbarIcon"
+        android:layout_width="89dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBottom_toBottomOf="@+id/notificationToolbar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/home_image" />
+
+    <ImageView
+        android:id="@+id/notificationImageView"
+        android:layout_width="375dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="10dp"
+        android:background="#FFFFFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/notificationTitle" />
+
+    <TextView
+        android:id="@+id/notificationTextBody"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="TextView"
+        android:scrollbars="vertical"
+        android:textColor="#007042"
+        app:layout_constraintBottom_toBottomOf="@+id/notificationView"
+        app:layout_constraintEnd_toEndOf="@+id/notificationView"
+        app:layout_constraintStart_toStartOf="@+id/notificationView"
+        app:layout_constraintTop_toTopOf="@+id/notificationView" />
+</androidx.constraintlayout.widget.ConstraintLayout>
